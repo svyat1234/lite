@@ -1,0 +1,210 @@
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    outline: none
+body
+    font-family: sans-serif
+    background: #fafafa
+.container
+    max-width: 324px
+    width: 100%
+    margin: auto
+.header
+    padding-top: 20px
+    padding-bottom: 20px
+    border-bottom: 1px solid #C7C7C7
+    background: #ffffff
+    &__block
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__logo
+        font-size: 15px
+        font-weight: bold
+        text-decoration: none
+        color: #000000
+    &__nav
+        &__block
+            width: 20px
+            height: 20px
+            background: url('../img/burger_menu.svg') no-repeat center
+.main__nav
+    padding-top: 24px
+    padding-bottom: 8px
+    &__link
+        text-decoration: none
+        font-size: 13px
+        color: #000000
+.back
+    padding-bottom: 32px
+    display: flex
+    align-items: center
+    &__button
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        border: 1px solid #C7C7C7
+        background: transparent
+        margin-right: 12px
+        background: url('../img/back.svg') no-repeat center
+    &__text
+        font-weight: bold
+        font-size: 15px
+.access
+    &__title
+        padding-bottom: 40px
+    &__block
+        margin: auto
+        padding-top: 16px
+        padding-bottom: 32px
+        border-radius: 20px
+        border: 1px solid #C7C7C7
+        max-width: 344px
+        width: 100%
+        background: #ffffff
+    &__settings
+        max-width: 305px
+        width: 100%
+        margin: auto
+        &__cards
+            margin-top: 40px
+        &__input
+            position: relative
+            appearance: none
+            &::before 
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 10px
+                height: 10px
+                margin-left: -5px
+                margin-bottom: -22px
+                border-radius: 50%
+                transform: translate(-50%, -50%)
+                background-color: white
+                border: 2px solid #C7C7C7
+
+            &:checked::after
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                margin-bottom: -16px
+                margin-left: -5px
+                width: 8px
+                height: 8px
+                border-radius: 50%
+                background-color: #4A1ABB
+                transform: translate(-50%, -50%)
+                visibility: visible
+        &__title
+            margin-bottom: 16px
+            font-size: 11px
+            text-transform: uppercase
+            color: #1C1E20
+            font-weight: 300
+        &__card
+            display: flex
+            align-items: flex-start
+            margin-bottom: 24px
+            margin-left: 11px
+        &__info
+            margin-left: 8px
+            &__title
+                font-size: 15px
+                font-weight: bold
+                margin-bottom: 4px
+                color: #1C1E20
+            &__text
+                font-size: 15px
+                color: #818181
+        &__password
+            margin-left: 20px
+            display: flex
+            flex-direction: column
+            &__input
+                height: 24px
+                border: none
+                border-bottom: 1px solid #C7C7C7
+                margin-bottom: 41px
+        &__label
+            font-size: 13px
+            margin-bottom: 8px
+    &__content
+        font-size: 20px
+    &__about
+        font-size: 15px
+        color: #818181
+        display: flex
+        padding-top: 12px
+    &__buttons
+        display: flex
+        justify-content: flex-end
+    &__button
+        padding: 11px 16px
+        border-radius: 20px
+        border: none
+        font-size: 15px
+        font-weight: bold
+        &__secondary
+            background: transparent
+            border: 1px solid #C7C7C7
+            margin-right: 12px
+        &__primary
+            background-color: #4A1ABB
+            color: #ffffff
+@media  (min-width: 992px)
+    .container
+        max-width: 1200px
+    .header
+        &__logo
+            font-size: 20px
+        &__nav
+            &__block
+                cursor: pointer
+    .back__button
+        cursor: pointer
+    .main__nav__link
+        font-size: 20px
+    .access
+        &__title
+            font-size: 50px
+        &__block
+            max-width: 1200px
+            background: transparent
+            border: none
+        &__settings
+            max-width: 1200px
+            &__title
+                font-size: 15px
+            &__info
+                margin-left: 20px
+                &__title
+                    font-size: 20px
+                &__text
+                    font-size: 18px
+            &__password
+                margin-left: 32px
+                &__input
+                    font-size: 18px
+                    height: 30px
+                    background: transparent
+                    max-width: 500px
+            &__label
+                font-size: 18px
+        &__content
+            font-size: 24px
+        &__about
+            font-size: 20px
+        &__button
+            cursor: pointer
+            font-size: 20px
+            transition: all 0.2s
+            &__secondary
+                &:hover
+                    box-shadow: 0 0 10px #0000002c
+            &__primary
+                &:hover
+                    box-shadow: 0 0 10px #4a1abb80
